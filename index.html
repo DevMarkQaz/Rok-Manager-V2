@@ -29,10 +29,10 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--txt);font-family:'Exo 2',sans-serif;min-height:100vh;overflow-x:hidden}
-
+ 
 /* NOISE OVERLAY */
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
-
+ 
 /* HEADER */
 .header{background:linear-gradient(135deg,#0a0f1a 0%,#0d1b2e 50%,#0a0f1a 100%);border-bottom:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
 .header-title{font-family:'Orbitron',sans-serif;font-size:18px;font-weight:700;color:var(--primary);letter-spacing:1px;text-shadow:0 0 20px rgba(29,140,248,0.4)}
@@ -40,7 +40,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .header-actions{display:flex;gap:8px;flex-wrap:wrap}
 .btn-sm{padding:6px 12px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--txt);font-size:12px;font-family:'Exo 2',sans-serif;cursor:pointer;transition:all .2s}
 .btn-sm:hover{border-color:var(--primary);color:var(--primary);background:var(--infoBg)}
-
+ 
 /* NOTIFICATION BANNER */
 .notif-banner{background:linear-gradient(90deg,var(--warningBg),#1a0800);border:1px solid var(--warning);border-radius:10px;padding:12px 16px;margin:12px 16px;display:flex;align-items:flex-start;gap:12px;animation:pulse-border 2s infinite}
 @keyframes pulse-border{0%,100%{box-shadow:0 0 0 0 rgba(255,170,0,.3)}50%{box-shadow:0 0 0 4px rgba(255,170,0,.1)}}
@@ -50,7 +50,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .notif-list span{color:var(--txt);font-weight:500}
 .notif-close{margin-left:auto;background:none;border:none;color:var(--txt2);cursor:pointer;font-size:16px;padding:0 4px;flex-shrink:0}
 .notif-close:hover{color:var(--warning)}
-
+ 
 /* STATS */
 .stat-row{display:flex;gap:8px;padding:10px 16px;overflow-x:auto;scrollbar-width:none}
 .stat-row::-webkit-scrollbar{display:none}
@@ -58,28 +58,28 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .stat-card:hover{transform:translateY(-2px)}
 .stat-val{font-family:'Orbitron',sans-serif;font-size:20px;font-weight:700;line-height:1}
 .stat-lbl{font-size:10px;margin-top:4px;opacity:.85;font-weight:500}
-
+ 
 /* WEEK PROGRESS BAR */
 .week-progress-wrap{margin:0 16px 10px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
 .week-progress-label{display:flex;justify-content:space-between;margin-bottom:6px}
 .week-progress-bar{height:10px;background:var(--border);border-radius:5px;overflow:hidden}
 .week-progress-fill{height:100%;border-radius:5px;transition:width .6s ease;background:linear-gradient(90deg,var(--primary),var(--success))}
-
+ 
 /* TABS */
 .tab-bar{display:flex;gap:4px;padding:10px 16px;border-bottom:1px solid var(--border);overflow-x:auto;scrollbar-width:none}
 .tab-bar::-webkit-scrollbar{display:none}
 .tab-btn{flex-shrink:0;flex:1;min-width:50px;padding:8px 6px;border-radius:8px;border:1px solid transparent;background:transparent;color:var(--txt2);font-size:11px;font-family:'Exo 2',sans-serif;cursor:pointer;transition:all .2s;font-weight:500;white-space:nowrap}
 .tab-btn.active{background:var(--infoBg);border-color:var(--info);color:var(--info)}
-
+ 
 /* CONTENT */
 .content{padding:14px 16px;max-width:900px;margin:0 auto}
-
+ 
 /* RESOURCE GUIDE */
 .res-guide{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:12px}
 .res-guide-title{font-size:12px;font-weight:600;color:var(--txt);margin-bottom:8px}
 .res-badges{display:flex;flex-wrap:wrap;gap:6px}
 .res-badge{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:12px;color:var(--txt2)}
-
+ 
 /* FILTERS */
 .filter-row{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;align-items:center}
 .search-input{flex:1;min-width:150px;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 12px;font-size:13px;color:var(--txt);font-family:'Exo 2',sans-serif;outline:none;transition:border-color .2s}
@@ -88,7 +88,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .filter-chips{display:flex;gap:6px;flex-wrap:wrap}
 .chip{padding:5px 12px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:var(--txt2);font-size:12px;cursor:pointer;transition:all .2s;font-family:'Exo 2',sans-serif}
 .chip.active{background:var(--infoBg);border-color:var(--info);color:var(--info)}
-
+ 
 /* RANK BADGE */
 .rank-badge{padding:1px 7px;border-radius:4px;font-size:10px;font-weight:700;letter-spacing:.5px;font-family:'Orbitron',sans-serif}
 .rank-R1{background:linear-gradient(90deg,#4c1d00,#7a2e00);color:#ff8c42;border:1px solid #ff8c42}
@@ -96,7 +96,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .rank-R3{background:linear-gradient(90deg,#001a10,#002215);color:#00d68f;border:1px solid #00d68f}
 .rank-R4{background:linear-gradient(90deg,#001a2e,#00233c);color:#00b4d8;border:1px solid #00b4d8}
 .rank-R5{background:linear-gradient(90deg,#1a0f2e,#24163c);color:#a78bfa;border:1px solid #a78bfa}
-
+ 
 /* MEMBER CARD */
 .member-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px;transition:border-color .2s,box-shadow .2s}
 .member-card:hover{box-shadow:0 2px 12px rgba(29,140,248,.08)}
@@ -112,7 +112,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .badge-partial{background:var(--warningBg);color:var(--warning)}
 .badge-unpaid{background:var(--dangerBg);color:var(--danger)}
 .badge-punished{background:var(--dangerBg);color:var(--danger)}
-
+ 
 /* ACTION BUTTONS */
 .action-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .action-btn{padding:5px 10px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--txt2);font-size:11px;cursor:pointer;transition:all .2s;font-family:'Exo 2',sans-serif}
@@ -121,14 +121,14 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .action-btn.active-partial{background:var(--warningBg);border-color:var(--warning);color:var(--warning)}
 .action-btn.active-punish{background:var(--dangerBg);border-color:var(--danger);color:var(--danger)}
 .action-btn.active-remind{background:var(--infoBg);border-color:var(--info);color:var(--info)}
-
+ 
 /* EXPAND PANEL */
 .expand-panel{margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
 .expand-label{font-size:11px;color:var(--txt2);margin-bottom:6px}
 .res-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
 .res-chip{padding:5px 10px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--txt2);font-size:12px;cursor:pointer;transition:all .2s}
 .res-chip.selected{border-color:var(--primary);color:var(--primary);background:var(--infoBg)}
-
+ 
 /* CHECKBOX RESOURCES */
 .resource-checks{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
 .res-check-item{display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:8px;border:1px solid var(--border);background:var(--surface);cursor:pointer;transition:all .2s;user-select:none}
@@ -137,16 +137,16 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .res-check-item input[type=checkbox]{width:15px;height:15px;accent-color:var(--success);cursor:pointer}
 .res-check-label{font-size:12px;color:var(--txt2)}
 .res-check-item.checked .res-check-label{color:var(--success);font-weight:500}
-
+ 
 /* GEMS INPUT */
 .gems-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
 .gems-input{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:6px 10px;font-size:13px;color:var(--txt);width:100px;font-family:'Exo 2',sans-serif;outline:none}
 .gems-input:focus{border-color:var(--gem)}
-
+ 
 /* SAVE BTN */
 .save-btn{background:var(--primary);border:none;border-radius:8px;padding:9px;color:#fff;font-size:13px;font-weight:600;cursor:pointer;width:100%;font-family:'Exo 2',sans-serif;transition:all .2s;letter-spacing:.5px}
 .save-btn:hover{background:#1a7ee0;box-shadow:0 0 15px rgba(29,140,248,.3)}
-
+ 
 /* REPORT */
 .report-section{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:10px}
 .section-title{font-size:14px;font-weight:600;color:var(--txt);margin-bottom:10px;display:flex;align-items:center;gap:6px}
@@ -155,7 +155,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .report-name .rn-govid{color:var(--txt2);font-size:11px}
 .report-name .rn-res{font-size:11px;color:var(--info)}
 .report-name .rn-gems{font-size:11px;color:var(--gem)}
-
+ 
 /* ADD MEMBER */
 .add-panel{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:12px}
 .field-input{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 12px;font-size:13px;color:var(--txt);width:100%;font-family:'Exo 2',sans-serif;outline:none;margin-bottom:8px}
@@ -163,7 +163,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .field-input::placeholder{color:var(--txt2)}
 .del-btn{background:none;border:1px solid var(--danger);border-radius:6px;padding:5px 10px;color:var(--danger);font-size:11px;cursor:pointer;font-family:'Exo 2',sans-serif;transition:all .2s}
 .del-btn:hover{background:var(--dangerBg)}
-
+ 
 /* HISTORY */
 .hist-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px}
 .hist-week{font-size:13px;font-weight:600;color:var(--txt);margin-bottom:8px}
@@ -172,7 +172,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .hist-bar{border-radius:4px 4px 0 0;min-height:4px;width:100%;transition:height .3s}
 .hist-bar-lbl{font-size:10px;color:var(--txt2)}
 .hist-bar-val{font-size:11px;font-weight:600}
-
+ 
 /* LEADERBOARD */
 .lb-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:10px}
 .lb-title{font-size:13px;font-weight:600;color:var(--txt);margin-bottom:10px;display:flex;align-items:center;gap:6px}
@@ -187,7 +187,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .lb-bar-fill{height:100%;border-radius:4px;transition:width .5s ease}
 .lb-val{font-size:12px;font-weight:600;min-width:40px;text-align:right}
 .lb-medal{font-size:16px;min-width:22px;text-align:center}
-
+ 
 /* MODAL */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);display:flex;align-items:flex-end;justify-content:center;z-index:200;backdrop-filter:blur(4px)}
 .modal-box{background:var(--surface);border-radius:16px 16px 0 0;padding:24px;width:100%;max-width:500px;border-top:1px solid var(--border)}
@@ -199,61 +199,61 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .modal-cancel{flex:1;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:9px;color:var(--txt2);font-size:13px;cursor:pointer;font-family:'Exo 2',sans-serif}
 .modal-confirm{flex:1;background:var(--primary);border:none;border-radius:8px;padding:9px;color:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:'Exo 2',sans-serif}
 .modal-danger{flex:1;background:var(--dangerBg);border:1px solid var(--danger);border-radius:8px;padding:9px;color:var(--danger);font-size:13px;font-weight:600;cursor:pointer;font-family:'Exo 2',sans-serif}
-
+ 
 /* TOAST */
 .toast{position:fixed;top:70px;left:50%;transform:translateX(-50%);background:#011f0f;border:1px solid var(--success);border-radius:20px;padding:8px 20px;font-size:13px;color:var(--success);font-weight:500;z-index:300;white-space:nowrap;transition:opacity .3s;pointer-events:none}
 .toast.hidden{opacity:0}
-
+ 
 /* GRID */
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 @media(max-width:480px){.grid2{grid-template-columns:1fr}}
-
+ 
 /* EXPEL WARNING */
 .expel-badge{background:linear-gradient(90deg,#2d0000,#1a0005);border:1px solid var(--danger);border-radius:6px;padding:3px 8px;font-size:10px;color:var(--danger);font-weight:700;letter-spacing:.5px}
-
+ 
 /* NEW WEEK BANNER */
 .new-week-btn{background:linear-gradient(90deg,#001a10,#002215);border:1px solid var(--success);border-radius:8px;padding:8px 16px;color:var(--success);font-size:12px;font-weight:600;cursor:pointer;font-family:'Exo 2',sans-serif;transition:all .2s;display:flex;align-items:center;gap:6px}
 .new-week-btn:hover{box-shadow:0 0 12px rgba(0,214,143,.2)}
-
+ 
 /* BULK ACTIONS */
 .bulk-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;padding:10px 12px;background:var(--surface);border:1px solid var(--border);border-radius:8px}
 .bulk-lbl{font-size:11px;color:var(--txt2);align-self:center;white-space:nowrap}
-
+ 
 /* SELECT */
 .field-select{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 12px;font-size:13px;color:var(--txt);width:100%;font-family:'Exo 2',sans-serif;outline:none;cursor:pointer}
 .field-select:focus{border-color:var(--primary)}
-
+ 
 /* SCROLLBAR */
 ::-webkit-scrollbar{width:4px;height:4px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
-
+ 
 /* EXEMPT GRID RESPONSIVE */
 @media(max-width:520px){
   #tab-rankboard .exempt-grid{grid-template-columns:1fr!important}
   #tab-rankboard .exempt-grid > div:first-child{border-radius:0!important}
   #tab-rankboard .exempt-grid > div:last-child{border-radius:0!important}
 }
-
+ 
 /* SAVE INDICATOR */
 .save-dot{width:7px;height:7px;border-radius:50%;background:var(--success);display:inline-block;margin-left:6px;animation:blink 2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 .save-dot.dirty{background:var(--warning)}
-
+ 
 .hidden{display:none!important}
 .flex{display:flex}
 .gap8{gap:8px}
 .w100{width:100%}
-
+ 
 /* TREND CHART */
 .trend-chart{margin-top:10px;background:var(--card);border-radius:8px;padding:10px;overflow-x:auto}
 .trend-chart canvas{display:block}
-
+ 
 /* SORTBAR */
 .sort-bar{display:flex;align-items:center;gap:6px;margin-bottom:8px;font-size:11px;color:var(--txt2)}
 .sort-btn{padding:4px 10px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--txt2);font-size:11px;cursor:pointer;font-family:'Exo 2',sans-serif;transition:all .2s}
 .sort-btn.active{border-color:var(--primary);color:var(--primary);background:var(--infoBg)}
-
+ 
 /* RANK BOARD */
 .rank-board-card{border-radius:12px;padding:14px;margin-bottom:10px;border:1px solid transparent;position:relative;overflow:hidden;transition:box-shadow .2s}
 .rank-board-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.3)}
@@ -280,12 +280,12 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .rank-member-chip .chip-del{opacity:0;font-size:10px;margin-left:2px;transition:opacity .2s}
 .rank-member-chip:hover .chip-del{opacity:1}
 .rank-assign-btn{padding:5px 12px;border-radius:8px;font-size:11px;cursor:pointer;font-family:'Exo 2',sans-serif;transition:all .2s;border:1px dashed;background:transparent;display:flex;align-items:center;gap:5px;margin:3px}
-
+ 
 /* EXEMPT BADGE */
 .badge-exempt{background:linear-gradient(90deg,#003300,#004d00);color:#4ade80;border:1px solid #4ade80;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:.3px}
 .member-card.exempt-member{opacity:.75}
 .member-card.exempt-member .member-name::after{content:' 🛡';font-size:11px}
-
+ 
 /* EXEMPT PANEL */
 .exempt-section{background:var(--surface);border:1px solid #1a3a1a;border-radius:10px;padding:14px;margin-bottom:10px}
 .exempt-row{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--border)}
@@ -293,7 +293,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .exempt-tag{padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700;white-space:nowrap}
 .tag-t5{background:#1a2200;color:#a3e635;border:1px solid #a3e635}
 .tag-farm{background:#001a33;color:#38bdf8;border:1px solid #38bdf8}
-
+ 
 /* RANK ASSIGN MODAL */
 .rank-assign-list{max-height:280px;overflow-y:auto;border:1px solid var(--border);border-radius:8px;margin-bottom:12px}
 .rank-assign-item{display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s}
@@ -303,10 +303,10 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 </style>
 </head>
 <body>
-
+ 
 <!-- TOAST -->
 <div class="toast hidden" id="toast"></div>
-
+ 
 <!-- HEADER -->
 <div class="header">
   <div>
@@ -320,7 +320,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     <button class="btn-sm" style="background:var(--gemBg);border-color:var(--gem);color:var(--gem)" onclick="openBackup()">💾 Backup</button>
   </div>
 </div>
-
+ 
 <!-- NOTIFICATION BANNER -->
 <div class="notif-banner" id="notif-banner">
   <div class="notif-icon">🔔</div>
@@ -330,7 +330,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
   </div>
   <button class="notif-close" onclick="document.getElementById('notif-banner').style.display='none'">✕</button>
 </div>
-
+ 
 <!-- WEEK PROGRESS -->
 <div class="week-progress-wrap" id="week-progress-wrap">
   <div class="week-progress-label">
@@ -346,10 +346,10 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     <span style="color:var(--danger)" id="prog-unpaid">❌ 0 chưa đóng</span>
   </div>
 </div>
-
+ 
 <!-- STATS -->
 <div class="stat-row" id="stat-row"></div>
-
+ 
 <!-- TABS -->
 <div class="tab-bar">
   <button class="tab-btn active" onclick="setTab('week',this)">📋 Tuần</button>
@@ -359,17 +359,17 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
   <button class="tab-btn" onclick="setTab('leaderboard',this)">🏆 BXH</button>
   <button class="tab-btn" onclick="setTab('history',this)">📜 LS</button>
 </div>
-
+ 
 <!-- CONTENT -->
 <div class="content">
-
+ 
   <!-- TAB WEEK -->
   <div id="tab-week">
     <div class="res-guide">
       <div class="res-guide-title">📌 Yêu cầu tuần này:</div>
       <div class="res-badges" id="res-badges"></div>
     </div>
-
+ 
     <!-- Bulk actions -->
     <div class="bulk-bar">
       <span class="bulk-lbl">⚡ Hàng loạt:</span>
@@ -377,7 +377,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
       <button class="btn-sm" onclick="bulkMarkAllPaid()" style="font-size:11px;padding:4px 10px;color:var(--success);border-color:var(--success)">✅ Đánh dấu tất cả đóng đủ</button>
       <button class="btn-sm" onclick="bulkResetAll()" style="font-size:11px;padding:4px 10px;color:var(--danger);border-color:var(--danger)">🔄 Reset tất cả</button>
     </div>
-
+ 
     <div class="filter-row">
       <input class="search-input" id="search" placeholder="Tìm tên / ID..." oninput="renderWeek()"/>
       <div class="sort-bar">
@@ -390,7 +390,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     <div class="filter-chips" style="margin-bottom:10px" id="filter-chips"></div>
     <div id="week-list"></div>
   </div>
-
+ 
   <!-- TAB MEMBERS -->
   <div id="tab-members" class="hidden">
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px;margin-bottom:10px;display:flex;align-items:center;gap:10px">
@@ -415,10 +415,10 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
         <input class="field-input" id="new-charid" placeholder="Character ID (số)" style="margin:0"/>
         <select class="field-select" id="new-rank" style="margin:0">
           <option value="R4">R4 - Sĩ Quan Cấp Cao</option>
-<option value="R5">R5 - Thủ Lĩnh</option>
-<option value="R3">R3 - Nghị Viên</option>
-<option value="R2">R2 - Nội Các</option>
-<option value="R1">R1 - Công Chức</option>
+          <option value="R5">R5 - Thủ Lĩnh</option>
+          <option value="R3">R3 - Nghị Viên</option>
+          <option value="R2">R2 - Nội Các</option>
+          <option value="R1">R1 - Công Chức</option>
         </select>
       </div>
       <input class="field-input" id="new-notes" placeholder="Ghi chú (tuỳ chọn)" style="margin-bottom:10px"/>
@@ -433,7 +433,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     </div>
     <div id="members-list"></div>
   </div>
-
+ 
   <!-- TAB RANK BOARD -->
   <div id="tab-rankboard" class="hidden">
     <div style="background:linear-gradient(135deg,#0d1b2e,#131e2e);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:12px">
@@ -441,7 +441,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
       <div style="font-size:11px;color:var(--txt2)">Phân công chức vụ — Click thành viên để đổi rank</div>
     </div>
     <div id="rank-board-content"></div>
-
+ 
     <!-- EXEMPT SECTION -->
     <div style="margin-top:6px">
       <!-- Header -->
@@ -452,10 +452,10 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
           <div style="font-size:11px;color:#6b9e7b;margin-top:2px">Lính T5 &amp; Acc Farm — Không bị tính vào thống kê thuế</div>
         </div>
       </div>
-
+ 
       <!-- Two columns -->
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#1a4a2a">
-
+ 
         <!-- T5 Panel -->
         <div style="background:#020f07;padding:14px;border-radius:0 0 0 12px">
           <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
@@ -470,7 +470,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
           <div id="t5-check-list" style="display:flex;flex-direction:column;gap:4px;max-height:260px;overflow-y:auto"></div>
           <button onclick="openSpecialAssign('T5','isT5','Lính T5','🛡','#a3e635')" style="margin-top:10px;width:100%;padding:7px;border-radius:8px;border:1px dashed #a3e63580;background:transparent;color:#a3e635;font-size:12px;cursor:pointer;font-family:'Exo 2',sans-serif;transition:all .2s" onmouseover="this.style.background='#0d2200'" onmouseout="this.style.background='transparent'">➕ Chọn từ danh sách thành viên</button>
         </div>
-
+ 
         <!-- Farm Panel -->
         <div style="background:#020a14;padding:14px;border-radius:0 0 12px 0">
           <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
@@ -485,7 +485,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
           <div id="farm-check-list" style="display:flex;flex-direction:column;gap:4px;max-height:260px;overflow-y:auto"></div>
           <button onclick="openSpecialAssign('Farm','isFarm','Acc Farm','🌾','#38bdf8')" style="margin-top:10px;width:100%;padding:7px;border-radius:8px;border:1px dashed #38bdf880;background:transparent;color:#38bdf8;font-size:12px;cursor:pointer;font-family:'Exo 2',sans-serif;transition:all .2s" onmouseover="this.style.background='#001a33'" onmouseout="this.style.background='transparent'">➕ Chọn từ danh sách thành viên</button>
         </div>
-
+ 
       </div><!-- end grid -->
       <!-- Footer note -->
       <div style="background:#011a10;border:1px solid #1a4a2a;border-top:none;border-radius:0 0 12px 12px;padding:8px 14px;font-size:11px;color:#6b9e7b;display:flex;align-items:center;gap:6px">
@@ -493,9 +493,9 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
       </div>
     </div>
   </div>
-
+ 
   <!-- TAB REPORT -->
-
+ 
   <div id="tab-report" class="hidden">
     <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;padding:12px 14px;background:var(--surface);border:1px solid var(--border);border-radius:10px">
       <div style="width:100%;font-size:12px;font-weight:600;color:var(--txt);margin-bottom:4px">⬇️ Xuất file theo nhóm:</div>
@@ -508,19 +508,19 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     </div>
     <div id="report-content"></div>
   </div>
-
+ 
   <!-- TAB LEADERBOARD -->
   <div id="tab-leaderboard" class="hidden">
     <div id="leaderboard-content"></div>
   </div>
-
+ 
   <!-- TAB HISTORY -->
   <div id="tab-history" class="hidden">
     <div id="history-list"></div>
   </div>
-
+ 
 </div>
-
+ 
 <!-- IMPORT MODAL -->
 <div class="modal-overlay hidden" id="import-modal">
   <div class="modal-box">
@@ -533,7 +533,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     </div>
   </div>
 </div>
-
+ 
 <!-- BULK ADD MODAL -->
 <div class="modal-overlay hidden" id="bulk-modal">
   <div class="modal-box" style="max-height:90vh;overflow-y:auto">
@@ -566,7 +566,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     </div>
   </div>
 </div>
-
+ 
 <!-- NEW WEEK MODAL -->
 <div class="modal-overlay hidden" id="newweek-modal">
   <div class="modal-box">
@@ -581,7 +581,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     </div>
   </div>
 </div>
-
+ 
 <!-- BACKUP MODAL -->
 <div class="modal-overlay hidden" id="backup-modal">
   <div class="modal-box" style="max-height:90vh;overflow-y:auto">
@@ -602,7 +602,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     </div>
   </div>
 </div>
-
+ 
 <!-- EDIT MEMBER MODAL -->
 <div class="modal-overlay hidden" id="edit-modal">
   <div class="modal-box">
@@ -628,11 +628,11 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
       <div>
         <div style="font-size:11px;color:var(--txt2);margin-bottom:4px">🎖️ Rank</div>
         <select class="field-select" id="edit-rank" style="margin:0">
-          <option value="R5">R5 - Leader</option>
-          <option value="R4">R4 - Member</option>
-          <option value="R3">R3 - Elder</option>
-          <option value="R2">R2 - Officer</option>
-          <option value="R1">R1 - Newbie</option>
+          <option value="R5">R5 - Thủ Lĩnh</option>
+          <option value="R4">R4 - Sĩ Quan Cấp Cao</option>
+          <option value="R3">R3 - Nghị Viên</option>
+          <option value="R2">R2 - Nội Các</option>
+          <option value="R1">R1 - Công Chức</option>
         </select>
       </div>
     </div>
@@ -646,8 +646,8 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     </div>
   </div>
 </div>
-
-
+ 
+ 
 <!-- SPECIAL ASSIGN MODAL (T5 / Farm checkbox picker) -->
 <div class="modal-overlay hidden" id="special-assign-modal">
   <div class="modal-box" style="max-height:88vh;overflow-y:auto">
@@ -664,7 +664,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     </div>
   </div>
 </div>
-
+ 
 <!-- RANK ASSIGN MODAL -->
 <div class="modal-overlay hidden" id="rank-assign-modal">
   <div class="modal-box">
@@ -680,7 +680,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     </div>
   </div>
 </div>
-
+ 
 <!-- QUICK ASSIGN MODAL (assign member to a rank slot) -->
 <div class="modal-overlay hidden" id="quick-assign-modal">
   <div class="modal-box" style="max-height:88vh;overflow-y:auto">
@@ -697,7 +697,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     </div>
   </div>
 </div>
-
+ 
 <script>
 // ── CONFIG ────────────────────────────────────────────────────────────────────
 const RES_CFG = {
@@ -706,23 +706,23 @@ const RES_CFG = {
   stone: { label:'Đá',  icon:'🪨', min:4500000, color:'#94A3B8' },
   gold:  { label:'Vàng', icon:'💰', min:4000000, color:'#EAB308' },
 };
-
+ 
 const RANK_LABELS = { R5:'R5 — Thủ Lĩnh', R4:'R4 — Sĩ Quan Cấp Cao', R3:'R3 — Nghị Viên', R2:'R2 — Nội Các', R1:'R1 — Công Chức' };
 const RANK_ORDER  = { R5:5, R4:4, R3:3, R2:2, R1:1 };
 const RANK_BOARD_CFG = {
-  R5: { label:'R5 — Thủ Lĩnh',         desc:'Thủ lĩnh cao nhất',        color:'#a78bfa', cardCls:'rank-R5-card',   chipBg:'#2d1f4e', chipColor:'#a78bfa', maxSlots:1,    isSpecial:false },
-  R4: { label:'R4 — Sĩ Quan Cấp Cao',  desc:'Sĩ quan cấp cao',              color:'#00b4d8', cardCls:'rank-R4-card',   chipBg:'#002233', chipColor:'#00b4d8', maxSlots:4,    isSpecial:false },
-  R3: { label:'R3 — Nghị Viên',         desc:'Nghị viên / Nghị sĩ',       color:'#00d68f', cardCls:'rank-R3-card',   chipBg:'#002211', chipColor:'#00d68f', maxSlots:null, isSpecial:false },
-  R2: { label:'R2 — Nội Các',           desc:'Nội các bang hội',        color:'#f59e0b', cardCls:'rank-R2-card',   chipBg:'#221600', chipColor:'#f59e0b', maxSlots:null, isSpecial:false },
-  R1: { label:'R1 — Công Chức',         desc:'Công chức bang hội',            color:'#ff8c42', cardCls:'rank-R1-card',   chipBg:'#2d1400', chipColor:'#ff8c42', maxSlots:null, isSpecial:false },
-  T5:   { label:'Lính T5',          icon:'🛡',  desc:'Lính đã nâng quân T5 — Miễn thuế', color:'#a3e635', cardCls:'rank-T5-card', chipBg:'#0d2200', chipColor:'#a3e635', maxSlots:null, isSpecial:true, exemptKey:'isT5'   },
-  Farm: { label:'Acc Farm',         icon:'🌾',  desc:'Tài khoản farm tài nguyên — Miễn thuế', color:'#38bdf8', cardCls:'rank-Farm-card', chipBg:'#001a33', chipColor:'#38bdf8', maxSlots:null, isSpecial:true, exemptKey:'isFarm' },
+  R5:   { label:'R5 — Thủ Lĩnh',        icon:'👑',  desc:'Thủ lĩnh bang hội',              color:'#a78bfa', cardCls:'rank-R5-card',   chipBg:'#2d1f4e', chipColor:'#a78bfa', maxSlots:1,    isSpecial:false },
+  R4:   { label:'R4 — Sĩ Quan Cấp Cao', icon:'⚔️', desc:'Sĩ quan cấp cao',                color:'#00b4d8', cardCls:'rank-R4-card',   chipBg:'#002233', chipColor:'#00b4d8', maxSlots:8,    isSpecial:false },
+  R3:   { label:'R3 — Nghị Viên',        icon:'🛡',  desc:'Nghị viên / Nghị sĩ',            color:'#00d68f', cardCls:'rank-R3-card',   chipBg:'#002211', chipColor:'#00d68f', maxSlots:null, isSpecial:false },
+  R2:   { label:'R2 — Nội Các',          icon:'🗡',  desc:'Nội các bang hội',               color:'#f59e0b', cardCls:'rank-R2-card',   chipBg:'#221600', chipColor:'#f59e0b', maxSlots:null, isSpecial:false },
+  R1:   { label:'R1 — Công Chức',        icon:'🪖',  desc:'Công chức bang hội',             color:'#ff8c42', cardCls:'rank-R1-card',   chipBg:'#2d1400', chipColor:'#ff8c42', maxSlots:null, isSpecial:false },
+  T5:   { label:'Lính T5',               icon:'🛡',  desc:'Lính đã nâng quân T5 — Miễn thuế', color:'#a3e635', cardCls:'rank-T5-card', chipBg:'#0d2200', chipColor:'#a3e635', maxSlots:null, isSpecial:true, exemptKey:'isT5'   },
+  Farm: { label:'Acc Farm',              icon:'🌾',  desc:'Tài khoản farm tài nguyên — Miễn thuế', color:'#38bdf8', cardCls:'rank-Farm-card', chipBg:'#001a33', chipColor:'#38bdf8', maxSlots:null, isSpecial:true, exemptKey:'isFarm' },
 };
-
+ 
 // ── STORAGE ───────────────────────────────────────────────────────────────────
 const STORAGE_KEY = 'rok_clan_v3';
 let isDirty = false;
-
+ 
 function loadData() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -741,7 +741,7 @@ function loadData() {
     ensureContrib(m.id);
   });
 }
-
+ 
 function saveData() {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({ members, contribs, weekHistory }));
@@ -749,20 +749,20 @@ function saveData() {
     updateSaveDot();
   } catch(e) { console.warn('Save failed', e); }
 }
-
+ 
 function markDirty() {
   isDirty = true;
   updateSaveDot();
 }
-
+ 
 function updateSaveDot() {
   const dot = document.getElementById('save-dot');
   if (dot) dot.className = 'save-dot' + (isDirty ? ' dirty' : '');
 }
-
+ 
 // Auto-save every 10s
 setInterval(() => { if (isDirty) saveData(); }, 10000);
-
+ 
 // ── SEED DATA ─────────────────────────────────────────────────────────────────
 let members = [
   {id:1,  name:'DragonKing',   govId:'#10234', charId:'58291047', rank:'R5', notes:'',               violations:0, warned:false},
@@ -781,7 +781,7 @@ let members = [
   {id:14, name:'DarkMatter',   govId:'#10247', charId:'58291060', rank:'R4', notes:'',               violations:0, warned:false},
   {id:15, name:'CrimsonKing',  govId:'#10248', charId:'58291061', rank:'R2', notes:'',               violations:5, warned:true },
 ];
-
+ 
 let contribs = {
   1:  {resources:{corn:true,wood:false,stone:false,gold:false}, paid:true,  partial:false, gems:3, reward:'wood',  punished:false, reminded:false},
   2:  {resources:{corn:false,wood:true,stone:false,gold:false}, paid:false, partial:true,  gems:0, reward:null,    punished:false, reminded:true },
@@ -799,7 +799,7 @@ let contribs = {
   14: {resources:{corn:false,wood:true,stone:false,gold:false}, paid:true,  partial:false, gems:2, reward:'corn',  punished:false, reminded:false},
   15: {resources:{corn:false,wood:false,stone:false,gold:false},paid:false, partial:false, gems:0, reward:null,    punished:true,  reminded:true },
 };
-
+ 
 // weekHistory now stores full snapshots (max 5 weeks)
 // each entry: { week, paid, partial, unpaid, punished, totalGems, snapshot: { members:[...], contribs:{...} } }
 let weekHistory = [
@@ -810,20 +810,20 @@ let weekHistory = [
   {week:'Tuần 03/03 - 09/03', paid:12, partial:1, unpaid:2, punished:1, totalGems:22,
    snapshot:{ members: [], contribs:{} }},
 ];
-
+ 
 let currentTab = 'week';
 let filterStatus = 'all';
 let expandedId = null;
 let sortWeek = 'name';
 let sortMember = 'name';
-
+ 
 // ── HELPERS ───────────────────────────────────────────────────────────────────
 function fmt(n) {
   if (n >= 1000000) return (n/1000000).toFixed(1)+'M';
   if (n >= 1000) return (n/1000).toFixed(0)+'K';
   return String(n);
 }
-
+ 
 function getCurrentWeek() {
   const now = new Date();
   const start = new Date(now); start.setDate(now.getDate() - now.getDay() + 1);
@@ -831,19 +831,19 @@ function getCurrentWeek() {
   const f = d => `${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}`;
   return `Tuần ${f(start)} - ${f(end)}`;
 }
-
+ 
 function getStatus(c) {
   if (!c) return 'unpaid';
   if (c.paid) return 'paid';
   if (c.partial) return 'partial';
   return 'unpaid';
 }
-
+ 
 function getDayInfo() {
   const now = new Date();
   return { day: now.getDay(), hour: now.getHours() };
 }
-
+ 
 function getNotifInfo() {
   const { day } = getDayInfo();
   if (day === 0) return { show: true, urgency: 'high', label: '🚨 HÔM NAY LÀ CHỦ NHẬT — HẠN CUỐI NỘP TÀI NGUYÊN!' };
@@ -851,7 +851,7 @@ function getNotifInfo() {
   if (day === 5) return { show: true, urgency: 'low', label: '📢 THỨ 6 — Nhắc nhở: Hạn nộp là Chủ Nhật' };
   return { show: false };
 }
-
+ 
 function ensureContrib(id) {
   if (!contribs[id]) {
     contribs[id] = {resources:{corn:false,wood:false,stone:false,gold:false},paid:false,partial:false,gems:0,reward:null,punished:false,reminded:false};
@@ -860,12 +860,12 @@ function ensureContrib(id) {
     contribs[id].resources = {corn:false,wood:false,stone:false,gold:false};
   }
 }
-
+ 
 function rankBadgeHtml(rank) {
   const r = rank || 'R4';
   return `<span class="rank-badge rank-${r}">${r}</span>`;
 }
-
+ 
 // ── NOTIFICATION ──────────────────────────────────────────────────────────────
 function buildNotification() {
   const info = getNotifInfo();
@@ -909,7 +909,7 @@ function buildNotification() {
   }
   document.getElementById('notif-list').innerHTML = html;
 }
-
+ 
 // ── STATS ─────────────────────────────────────────────────────────────────────
 function calcStats() {
   const exempt = members.filter(m => m.isT5 || m.isFarm);
@@ -922,9 +922,9 @@ function calcStats() {
   const totalGems= Object.values(contribs).reduce((s,c)=>s+(c?.gems||0),0);
   return {paid,partial,unpaid,punished,reminded,totalGems,total:members.length,exemptCount:exempt.length};
 }
-
+ 
 // renderStats is defined below with exempt-aware logic
-
+ 
 // ── SORT ──────────────────────────────────────────────────────────────────────
 function setSortWeek(s) {
   sortWeek = s;
@@ -950,14 +950,14 @@ function sortList(list, key) {
     return 0;
   });
 }
-
+ 
 // ── WEEK TAB ──────────────────────────────────────────────────────────────────
 function renderResBadges() {
   document.getElementById('res-badges').innerHTML = Object.entries(RES_CFG).map(([k,v]) =>
     `<div class="res-badge">${v.icon} ${v.label}: ${fmt(v.min)}</div>`
   ).join('');
 }
-
+ 
 function renderFilterChips() {
   const filters = [
     {id:'all',    label:'Tất cả'},
@@ -970,9 +970,9 @@ function renderFilterChips() {
     `<button class="chip${filterStatus===f.id?' active':''}" onclick="setFilter('${f.id}')">${f.label}</button>`
   ).join('');
 }
-
+ 
 function setFilter(f) { filterStatus = f; renderWeek(); }
-
+ 
 function renderWeek() {
   renderStats();
   renderFilterChips();
@@ -985,7 +985,7 @@ function renderWeek() {
     return okStatus && okSearch;
   });
   list = sortList(list, sortWeek);
-
+ 
   document.getElementById('week-list').innerHTML = list.map(m => {
     const c = contribs[m.id] || {};
     ensureContrib(m.id);
@@ -1000,7 +1000,7 @@ function renderWeek() {
         ? `<span style="color:var(--success);font-size:11px">${v.icon}✓</span>`
         : `<span style="color:var(--txt2);font-size:11px;opacity:.5">${v.icon}</span>`
     ).join(' ');
-
+ 
     return `<div class="member-card${contribs[m.id]?.punished?' punished':''}${(m.isT5||m.isFarm)?' exempt-member':''}" id="card-${m.id}">
       <div class="member-row">
         <div class="avatar" style="${rankAvatarStyle(m.rank)}">${m.name.slice(0,2).toUpperCase()}</div>
@@ -1028,12 +1028,12 @@ function renderWeek() {
   }).join('');
   buildNotification();
 }
-
+ 
 function rankAvatarStyle(rank) {
   const colors = { R5:'border-color:#a78bfa', R4:'border-color:#1d8cf8', R3:'border-color:#00d68f', R2:'border-color:#f59e0b', R1:'border-color:#64748b' };
   return colors[rank] || '';
 }
-
+ 
 function buildExpandPanel(id) {
   ensureContrib(id);
   const c = contribs[id];
@@ -1059,7 +1059,7 @@ function buildExpandPanel(id) {
     <button class="save-btn" onclick="saveExpand(${id})">💾 Lưu</button>
   </div>`;
 }
-
+ 
 function toggleResource(id, key) {
   ensureContrib(id);
   contribs[id].resources[key] = !contribs[id].resources[key];
@@ -1074,12 +1074,12 @@ function toggleResource(id, key) {
   }
   markDirty(); renderWeek();
 }
-
+ 
 function setReward(id, val) { ensureContrib(id); contribs[id].reward = val || null; markDirty(); renderWeek(); }
 function setGems(id, val) { ensureContrib(id); contribs[id].gems = parseInt(val) || 0; markDirty(); }
 function saveExpand(id) { saveData(); showToast('💾 Đã lưu!'); renderWeek(); }
 function toggleExpand(id) { expandedId = expandedId === id ? null : id; renderWeek(); }
-
+ 
 function markPaid(id) {
   ensureContrib(id);
   contribs[id].paid = true; contribs[id].partial = false; contribs[id].punished = false;
@@ -1110,7 +1110,7 @@ function toggleRemind(id) {
   contribs[id].reminded = !contribs[id].reminded;
   markDirty(); showToast(contribs[id].reminded ? '🔔 Đã đánh dấu nhắc' : '🔕 Bỏ nhắc'); renderWeek();
 }
-
+ 
 // ── BULK ACTIONS ──────────────────────────────────────────────────────────────
 function bulkRemindAll() {
   const targets = members.filter(m => getStatus(contribs[m.id]) !== 'paid');
@@ -1137,7 +1137,7 @@ function bulkResetAll() {
   });
   markDirty(); showToast('🔄 Đã reset tất cả!'); renderWeek();
 }
-
+ 
 // ── MEMBERS TAB ───────────────────────────────────────────────────────────────
 function updateMemberCountBar() {
   const pct = Math.min(members.length / 150 * 100, 100);
@@ -1149,7 +1149,7 @@ function updateMemberCountBar() {
   txt.textContent = `${members.length}/150`;
   txt.style.color  = members.length >= 150 ? 'var(--danger)' : members.length >= 120 ? 'var(--warning)' : 'var(--primary)';
 }
-
+ 
 function renderMembers() {
   updateMemberCountBar();
   const search = (document.getElementById('member-search')?.value || '').toLowerCase();
@@ -1181,12 +1181,12 @@ function renderMembers() {
     </div>`;
   }).join('');
 }
-
+ 
 function toggleAddPanel() {
   const p = document.getElementById('add-panel');
   p.style.display = p.style.display === 'none' ? 'block' : 'none';
 }
-
+ 
 function addMember() {
   if (members.length >= 150) { showToast('❗ Đã đạt tối đa 150 người!'); return; }
   const name   = document.getElementById('new-name').value.trim();
@@ -1203,7 +1203,7 @@ function addMember() {
   markDirty(); showToast('✅ Đã thêm thành viên!');
   renderMembers(); renderWeek();
 }
-
+ 
 function deleteMember(id, name) {
   if (!confirm(`Xoá "${name}"?`)) return;
   members = members.filter(m => m.id !== id);
@@ -1211,14 +1211,14 @@ function deleteMember(id, name) {
   markDirty(); showToast('🗑 Đã xoá!');
   renderMembers();
 }
-
+ 
 function clearAllMembers() {
   if (!confirm(`Xoá TẤT CẢ ${members.length} thành viên? Hành động này không thể hoàn tác!`)) return;
   members = []; contribs = {};
   markDirty(); showToast('🗑 Đã xoá tất cả!');
   renderMembers(); renderWeek();
 }
-
+ 
 let editingMemberId = null;
 function openEditMember(id) {
   const m = members.find(x => x.id === id);
@@ -1248,7 +1248,7 @@ function saveEditMember() {
   markDirty(); showToast('✅ Đã cập nhật!');
   renderMembers(); renderWeek();
 }
-
+ 
 // ── NEW WEEK ──────────────────────────────────────────────────────────────────
 function openNewWeek() { document.getElementById('newweek-modal').classList.remove('hidden'); }
 function closeNewWeek() { document.getElementById('newweek-modal').classList.add('hidden'); }
@@ -1275,7 +1275,7 @@ function doNewWeek() {
   renderWeek();
   if (currentTab === 'history') renderHistory();
 }
-
+ 
 // ── REPORT TAB ────────────────────────────────────────────────────────────────
 function renderReport() {
   const paid     = members.filter(m => getStatus(contribs[m.id]) === 'paid');
@@ -1284,7 +1284,7 @@ function renderReport() {
   const punished = members.filter(m => contribs[m.id]?.punished);
   const expel    = members.filter(m => m.violations >= 3);
   const s = calcStats();
-
+ 
   const section = (title, color, list) =>
     `<div class="report-section">
       <div class="section-title" style="color:${color}">${title} (${list.length} người)</div>
@@ -1303,7 +1303,7 @@ function renderReport() {
         </div>`;
       }).join('') : '<div style="color:var(--txt2);font-size:12px;padding:6px 0">Không có</div>'}
     </div>`;
-
+ 
   const statsHtml = `<div class="report-section">
     <div class="section-title">📊 Tổng kết</div>
     <div class="grid2">
@@ -1328,7 +1328,7 @@ function renderReport() {
       <span style="color:var(--info);font-size:14px;font-weight:600">Tỷ lệ đóng đủ: ${s.total?Math.round(s.paid/s.total*100):0}%</span>
     </div>
   </div>`;
-
+ 
   document.getElementById('report-content').innerHTML =
     statsHtml +
     section('✅ ĐÃ ĐÓNG ĐỦ','var(--success)',paid) +
@@ -1337,7 +1337,7 @@ function renderReport() {
     section('⚡ BỊ XỬ PHẠT','var(--danger)',punished) +
     section('🚨 NGUY CƠ TRỤC XUẤT (≥3 vi phạm)','var(--danger)',expel);
 }
-
+ 
 // ── LEADERBOARD ───────────────────────────────────────────────────────────────
 function renderLeaderboard() {
   // Top gems contributors
@@ -1346,23 +1346,23 @@ function renderLeaderboard() {
     .sort((a,b) => b.gems - a.gems)
     .slice(0, 10);
   const maxGems = Math.max(1, ...gemRanked.map(x=>x.gems));
-
+ 
   // Best compliance (fewest violations, most paid weeks)
   const compRanked = [...members]
     .map(m => ({ m, score: (10 - m.violations) * 10 + (contribs[m.id]?.paid ? 5 : 0) }))
     .sort((a,b) => b.score - a.score)
     .slice(0, 10);
   const maxScore = Math.max(1, ...compRanked.map(x=>x.score));
-
+ 
   // Most violated
   const violRanked = [...members]
     .filter(m => m.violations > 0)
     .sort((a,b) => b.violations - a.violations)
     .slice(0, 5);
   const maxViol = Math.max(1, ...violRanked.map(x=>x.violations));
-
+ 
   const medals = ['🥇','🥈','🥉'];
-
+ 
   const lbRow = (idx, name, rank, value, maxVal, color, suffix='') => `
     <div class="lb-row">
       <span class="lb-medal lb-rank-${idx < 3 ? idx+1 : 'other'}">${idx < 3 ? medals[idx] : `${idx+1}`}</span>
@@ -1373,7 +1373,7 @@ function renderLeaderboard() {
       </div>
       <span class="lb-val" style="color:${color}">${value}${suffix}</span>
     </div>`;
-
+ 
   // Stats by rank
   const rankStats = Object.keys(RANK_LABELS).map(r => {
     const rMembers = members.filter(m => (m.rank||'R4') === r);
@@ -1382,7 +1382,7 @@ function renderLeaderboard() {
     const rate = Math.round(paidCount / rMembers.length * 100);
     return { r, count:rMembers.length, paid:paidCount, rate };
   }).filter(Boolean);
-
+ 
   document.getElementById('leaderboard-content').innerHTML = `
     <div class="lb-card">
       <div class="lb-title">💎 Top Gems đóng góp</div>
@@ -1411,11 +1411,11 @@ function renderLeaderboard() {
     </div>
   `;
 }
-
+ 
 // ── HISTORY TAB ───────────────────────────────────────────────────────────────
 let expandedHistWeek = null;
 let expandedHistSection = null; // 'paid'|'unpaid'|'partial'|'punished'
-
+ 
 function toggleHistSection(weekIdx, section) {
   if (expandedHistWeek === weekIdx && expandedHistSection === section) {
     expandedHistWeek = null; expandedHistSection = null;
@@ -1424,13 +1424,13 @@ function toggleHistSection(weekIdx, section) {
   }
   renderHistory();
 }
-
+ 
 function renderHistory() {
   if (!weekHistory.length) {
     document.getElementById('history-list').innerHTML = '<div style="color:var(--txt2);text-align:center;padding:30px">Chưa có lịch sử — Nhấn "Tuần mới" để lưu tuần hiện tại</div>';
     return;
   }
-
+ 
   // Mini trend chart (SVG)
   const maxW = 300; const chartH = 60;
   const chartWeeks = weekHistory.slice(0,8).reverse();
@@ -1456,12 +1456,12 @@ function renderHistory() {
     </svg>
     <div style="text-align:right;font-size:11px;color:var(--txt2);margin-top:4px">💡 Tối đa 5 tuần được lưu</div>
   </div>`;
-
+ 
   const weekCards = weekHistory.map((h, weekIdx) => {
     const total = h.paid+h.partial+h.unpaid || 1;
     const pct = Math.round(h.paid/total*100);
     const hasSnap = h.snapshot && h.snapshot.members && h.snapshot.members.length > 0;
-
+ 
     // Compute lists from snapshot if available
     const snapMembers = hasSnap ? h.snapshot.members : [];
     const snapContribs = hasSnap ? h.snapshot.contribs : {};
@@ -1470,12 +1470,12 @@ function renderHistory() {
     const snapPartial  = snapMembers.filter(m => getSnapStatus(snapContribs[m.id]) === 'partial');
     const snapUnpaid   = snapMembers.filter(m => getSnapStatus(snapContribs[m.id]) === 'unpaid');
     const snapPunished = snapMembers.filter(m => snapContribs[m.id]?.punished);
-
+ 
     const btnStyle = (type, col) => {
       const active = expandedHistWeek===weekIdx && expandedHistSection===type;
       return `padding:5px 12px;border-radius:6px;border:1px solid ${active?col:'var(--border)'};background:${active?'rgba(0,0,0,.3)':'var(--surface)'};color:${active?col:'var(--txt2)'};font-size:11px;cursor:pointer;font-family:'Exo 2',sans-serif;transition:all .2s`;
     };
-
+ 
     const memberRows = (list, sc) => {
       if (!list.length) return `<div style="color:var(--txt2);font-size:12px;padding:6px 8px">Không có</div>`;
       return list.map(m => {
@@ -1493,10 +1493,10 @@ function renderHistory() {
         </div>`;
       }).join('');
     };
-
+ 
     const isExpW = expandedHistWeek===weekIdx;
     const expSec = expandedHistSection;
-
+ 
     return `<div class="hist-card">
       <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
         <div>
@@ -1509,7 +1509,7 @@ function renderHistory() {
           <div style="font-size:20px;font-weight:700;font-family:'Orbitron',sans-serif;color:${pct>=80?'var(--success)':pct>=50?'var(--warning)':'var(--danger)'}">${pct}%</div>
         </div>
       </div>
-
+ 
       <div style="display:flex;gap:8px;margin-bottom:10px">
         <div style="flex:1;background:var(--successBg);border-radius:6px;padding:6px;text-align:center">
           <div style="font-size:16px;font-weight:700;color:var(--success)">${h.paid}</div>
@@ -1532,7 +1532,7 @@ function renderHistory() {
           <div style="font-size:10px;color:var(--gem)">💎 Gems</div>
         </div>`:''}
       </div>
-
+ 
       ${hasSnap ? `<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px">
         <button style="${btnStyle('paid','var(--success)')}" onclick="toggleHistSection(${weekIdx},'paid')">✅ Đã đóng (${snapPaid.length})</button>
         <button style="${btnStyle('partial','var(--warning)')}" onclick="toggleHistSection(${weekIdx},'partial')">⚠️ Thiếu (${snapPartial.length})</button>
@@ -1554,10 +1554,10 @@ function renderHistory() {
       </div>` : ''}` : ''}
     </div>`;
   }).join('');
-
+ 
   document.getElementById('history-list').innerHTML = trendSvg + weekCards;
 }
-
+ 
 // ── EXPORT WEEK FILE ──────────────────────────────────────────────────────────
 function exportWeekFile(weekIdx) {
   const h = weekHistory[weekIdx];
@@ -1566,19 +1566,19 @@ function exportWeekFile(weekIdx) {
   const snapMembers = hasSnap ? h.snapshot.members : members;
   const snapContribs = hasSnap ? h.snapshot.contribs : contribs;
   const getSnapStatus = c => { if(!c)return'unpaid'; if(c.paid)return'paid'; if(c.partial)return'partial'; return'unpaid'; };
-
+ 
   const paid     = snapMembers.filter(m => getSnapStatus(snapContribs[m.id]) === 'paid');
   const partial  = snapMembers.filter(m => getSnapStatus(snapContribs[m.id]) === 'partial');
   const unpaid   = snapMembers.filter(m => getSnapStatus(snapContribs[m.id]) === 'unpaid');
   const punished = snapMembers.filter(m => snapContribs[m.id]?.punished);
   const total = snapMembers.length;
-
+ 
   let txt = `⚔️  RoK CLAN MANAGER — ${h.week}\n`;
   txt += '═'.repeat(50) + '\n';
   txt += `👥 Tổng thành viên: ${total} | 📊 Tỷ lệ đóng đủ: ${total?Math.round(paid.length/total*100):0}%\n`;
   txt += `💎 Tổng Gems: ${h.totalGems||0}\n`;
   txt += '═'.repeat(50) + '\n\n';
-
+ 
   txt += `✅ ĐÃ ĐÓNG ĐỦ — ${paid.length} người\n${'─'.repeat(40)}\n`;
   if (paid.length) {
     paid.forEach((m,i) => {
@@ -1587,7 +1587,7 @@ function exportWeekFile(weekIdx) {
       txt += `  ${String(i+1).padStart(2,'0')}. [${m.rank||'R4'}] ${m.name} ${m.govId}${m.charId?' ['+m.charId+']':''}${res?' — '+res:''}${(c.gems||0)>0?' 💎'+c.gems:''}\n`;
     });
   } else txt += '  (không có)\n';
-
+ 
   txt += `\n⚠️  ĐÓNG THIẾU — ${partial.length} người\n${'─'.repeat(40)}\n`;
   if (partial.length) {
     partial.forEach((m,i) => {
@@ -1596,27 +1596,27 @@ function exportWeekFile(weekIdx) {
       txt += `  ${String(i+1).padStart(2,'0')}. [${m.rank||'R4'}] ${m.name} ${m.govId} — Thiếu: ${missing}\n`;
     });
   } else txt += '  (không có)\n';
-
+ 
   txt += `\n❌ CHƯA ĐÓNG — ${unpaid.length} người\n${'─'.repeat(40)}\n`;
   if (unpaid.length) {
     unpaid.forEach((m,i) => {
       txt += `  ${String(i+1).padStart(2,'0')}. [${m.rank||'R4'}] ${m.name} ${m.govId}${snapContribs[m.id]?.reminded?' [Đã nhắc]':''}\n`;
     });
   } else txt += '  (không có)\n';
-
+ 
   txt += `\n⚡ BỊ XỬ PHẠT — ${punished.length} người\n${'─'.repeat(40)}\n`;
   if (punished.length) {
     punished.forEach((m,i) => {
       txt += `  ${String(i+1).padStart(2,'0')}. [${m.rank||'R4'}] ${m.name} ${m.govId} — ${m.violations} vi phạm${m.violations>=3?' ⚠️ TRỤC XUẤT':''}\n`;
     });
   } else txt += '  (không có)\n';
-
+ 
   txt += `\n${'═'.repeat(50)}\n`;
   txt += `📅 Xuất lúc: ${new Date().toLocaleString('vi-VN')}\n`;
-
+ 
   downloadTxt(txt, `rok-${h.week.replace(/\s/g,'-').replace(/\//g,'-')}.txt`);
 }
-
+ 
 // ── TABS ──────────────────────────────────────────────────────────────────────
 function setTab(id, btn) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -1632,7 +1632,7 @@ function setTab(id, btn) {
   if (id === 'leaderboard') renderLeaderboard();
   if (id === 'history') renderHistory();
 }
-
+ 
 // ── DOWNLOAD HELPER ───────────────────────────────────────────────────────────
 function downloadTxt(content, filename) {
   const bom = '\uFEFF'; // UTF-8 BOM for proper Vietnamese display
@@ -1642,7 +1642,7 @@ function downloadTxt(content, filename) {
   a.href = url; a.download = filename; a.click();
   URL.revokeObjectURL(url);
 }
-
+ 
 function downloadCsv(rows, filename) {
   const bom = '\uFEFF';
   const csv = rows.map(r => r.map(c => `"${String(c).replace(/"/g,'""')}"`).join(',')).join('\n');
@@ -1652,7 +1652,7 @@ function downloadCsv(rows, filename) {
   a.href = url; a.download = filename; a.click();
   URL.revokeObjectURL(url);
 }
-
+ 
 // ── EXPORT FUNCTIONS ──────────────────────────────────────────────────────────
 function exportCategory(type) {
   const now = new Date().toLocaleString('vi-VN');
@@ -1671,12 +1671,12 @@ function exportCategory(type) {
     list = members.filter(m => contribs[m.id]?.punished);
     title = 'BỊ XỬ PHẠT'; emoji = '⚡';
   }
-
+ 
   let txt = `⚔️  RoK CLAN — ${emoji} ${title}\n`;
   txt += `📅 ${week} | 🕐 ${now}\n`;
   txt += '═'.repeat(50) + '\n\n';
   txt += `Tổng: ${list.length} người\n\n`;
-
+ 
   list.forEach((m, i) => {
     const c = contribs[m.id]||{};
     const res = c.resources ? Object.entries(RES_CFG).filter(([k])=>c.resources[k]).map(([,v])=>v.label).join('+') : '';
@@ -1693,13 +1693,13 @@ function exportCategory(type) {
     if (c.reminded && (type==='unpaid'||type==='partial')) txt += `    Trạng thái  : Đã nhắc 🔔\n`;
     txt += '\n';
   });
-
+ 
   txt += '═'.repeat(50) + '\n';
   txt += `Xuất từ RoK Clan Manager\n`;
   downloadTxt(txt, `rok-${type}-${week.replace(/\s/g,'-').replace(/\//g,'-')}.txt`);
   showToast(`⬇️ Đã tải file ${emoji} ${title}!`);
 }
-
+ 
 function exportCsvAll() {
   const week = getCurrentWeek();
   const rows = [['STT','Tên','Rank','Governor ID','Character ID','Trạng thái','Ngô','Gỗ','Đá','Vàng','Gems','Vi phạm','Bị phạt','Đã nhắc']];
@@ -1717,7 +1717,7 @@ function exportCsvAll() {
   downloadCsv(rows, `rok-all-${week.replace(/\s/g,'-').replace(/\//g,'-')}.csv`);
   showToast('⬇️ Đã tải file CSV đầy đủ!');
 }
-
+ 
 // ── EXPORT REPORT ─────────────────────────────────────────────────────────────
 function exportReport() {
   const s = calcStats();
@@ -1727,7 +1727,7 @@ function exportReport() {
   const punished= members.filter(m => contribs[m.id]?.punished);
   const expel   = members.filter(m => m.violations >= 3);
   const now = new Date().toLocaleString('vi-VN');
-
+ 
   let txt = '⚔️  RoK CLAN MANAGER — BÁO CÁO TUẦN\n';
   txt += '─'.repeat(45) + '\n';
   txt += `📅 ${getCurrentWeek()}\n🕐 Xuất lúc: ${now}\n👥 Tổng: ${members.length}\n`;
@@ -1760,23 +1760,23 @@ function exportReport() {
   txt += `\n${'─'.repeat(45)}\n`;
   txt += `📊 Đã đóng ${s.paid} | Thiếu ${s.partial} | Chưa đóng ${s.unpaid} | Bị phạt ${s.punished}\n`;
   txt += `Tỷ lệ: ${s.total?Math.round(s.paid/s.total*100):0}%\n`;
-
+ 
   navigator.clipboard.writeText(txt).then(() => showToast('📋 Đã sao chép báo cáo!')).catch(() => {
     const ta = document.createElement('textarea');
     ta.value = txt; document.body.appendChild(ta); ta.select(); document.execCommand('copy');
     document.body.removeChild(ta); showToast('📋 Đã sao chép báo cáo!');
   });
 }
-
+ 
 function exportJSON() {
   const data = JSON.stringify({ members, contribs, weekHistory }, null, 2);
   navigator.clipboard.writeText(data).then(() => showToast('💾 Đã sao chép JSON!')).catch(() => showToast('❗ Không sao chép được'));
 }
-
+ 
 // ── BACKUP / RESTORE ──────────────────────────────────────────────────────────
 function openBackup() { document.getElementById('backup-modal').classList.remove('hidden'); }
 function closeBackup() { document.getElementById('backup-modal').classList.add('hidden'); }
-
+ 
 function doExportBackup() {
   const data = JSON.stringify({ members, contribs, weekHistory, exportedAt: new Date().toISOString() }, null, 2);
   const blob = new Blob([data], { type: 'application/json' });
@@ -1788,7 +1788,7 @@ function doExportBackup() {
   URL.revokeObjectURL(url);
   showToast('⬇️ Đã tải file backup!');
 }
-
+ 
 function doRestore(event) {
   const file = event.target.files[0];
   if (!file) return;
@@ -1811,7 +1811,7 @@ function doRestore(event) {
   reader.readAsText(file);
   event.target.value = '';
 }
-
+ 
 function doRestoreFromText() {
   const raw = document.getElementById('backup-text').value.trim();
   if (!raw) { showToast('❗ Chưa dán JSON vào'); return; }
@@ -1830,7 +1830,7 @@ function doRestoreFromText() {
     renderWeek(); renderMembers();
   } catch(err) { showToast('❗ Lỗi parse JSON'); }
 }
-
+ 
 // ── IMPORT ────────────────────────────────────────────────────────────────────
 function openImport() { document.getElementById('import-modal').classList.remove('hidden'); }
 function closeImport() { document.getElementById('import-modal').classList.add('hidden'); }
@@ -1852,7 +1852,7 @@ function doImport() {
   markDirty(); showToast(`✅ Đã nhập ${toAdd.length} thành viên!`);
   renderWeek(); renderMembers();
 }
-
+ 
 // ── BULK ADD ──────────────────────────────────────────────────────────────────
 function openBulkAdd() {
   document.getElementById('bulk-modal').classList.remove('hidden');
@@ -1860,7 +1860,7 @@ function openBulkAdd() {
   updateBulkPreview();
 }
 function closeBulkAdd() { document.getElementById('bulk-modal').classList.add('hidden'); }
-
+ 
 function updateBulkPreview() {
   const lines = document.getElementById('bulk-text').value.trim().split('\n').filter(l=>l.trim());
   const remaining = 150 - members.length;
@@ -1872,12 +1872,12 @@ function updateBulkPreview() {
       : `<span style="color:var(--success)">${willAdd} người sẽ được thêm</span>`;
   }
 }
-
+ 
 function parseBulkLine(line) {
   const parts = line.split('|').map(s => s.trim());
   return { name: parts[0]||'', govId: parts[1]||'', charId: parts[2]||'', rank: parts[3]||'R4', notes: parts[4]||'' };
 }
-
+ 
 function doBulkAdd() {
   const raw = document.getElementById('bulk-text').value.trim();
   const lines = raw.split('\n').filter(l=>l.trim());
@@ -1905,7 +1905,7 @@ function doBulkAdd() {
   markDirty(); showToast(`✅ Đã thêm ${added} thành viên! (${members.length}/150)`);
   renderWeek(); renderMembers();
 }
-
+ 
 // ── SAVE WEEK ─────────────────────────────────────────────────────────────────
 function saveWeek() {
   const s = calcStats();
@@ -1917,7 +1917,7 @@ function saveWeek() {
   saveData();
   showToast('📜 Đã lưu tuần này!');
 }
-
+ 
 // ── RANK BOARD ────────────────────────────────────────────────────────────────
 function renderRankBoard() {
   const cfg = RANK_BOARD_CFG;
@@ -1927,7 +1927,7 @@ function renderRankBoard() {
   }).join('');
   document.getElementById('rank-board-content').innerHTML = html;
 }
-
+ 
 function renderNormalRankCard(rank, c) {
   const rankMembers = members.filter(m => (m.rank||'R4') === rank);
   const countBg = rank==='R5'?'#3b1f6e':rank==='R4'?'#003352':rank==='R3'?'#003322':rank==='R2'?'#332200':'#331a00';
@@ -1960,12 +1960,12 @@ function renderNormalRankCard(rank, c) {
     </div>
   </div>`;
 }
-
+ 
 function renderSpecialRankCard(rank, c) {
   const exemptKey = c.exemptKey; // 'isT5' or 'isFarm'
   const exemptMembers = members.filter(m => m[exemptKey]);
   const countBg = rank==='T5' ? '#1a3000' : '#001a33';
-
+ 
   // Chips for already-assigned members (with remove button)
   const chips = exemptMembers.map(m =>
     `<span class="rank-member-chip" style="background:${c.chipBg};color:${c.chipColor};border-color:${c.chipColor}40;cursor:default">
@@ -1974,12 +1974,12 @@ function renderSpecialRankCard(rank, c) {
       <span onclick="removeSpecialRank(${m.id},'${exemptKey}')" title="Xoá" style="margin-left:6px;cursor:pointer;opacity:.7;font-size:11px" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.7">✕</span>
     </span>`
   ).join('');
-
+ 
   // Add button → opens checkbox modal
   const addBtn = `<button class="rank-assign-btn" style="color:${c.color};border-color:${c.color}40" onclick="openSpecialAssign('${rank}','${exemptKey}','${c.label}','${c.icon}','${c.color}')">
     ➕ Thêm vào ${c.label}
   </button>`;
-
+ 
   return `<div class="rank-board-card ${c.cardCls}">
     <div class="rank-board-header">
       <div class="rank-board-title" style="color:${c.color}">
@@ -1998,7 +1998,7 @@ function renderSpecialRankCard(rank, c) {
     </div>
   </div>`;
 }
-
+ 
 function removeSpecialRank(id, exemptKey) {
   const m = members.find(x => x.id === id);
   if (!m) return;
@@ -2010,11 +2010,11 @@ function removeSpecialRank(id, exemptKey) {
   renderWeek();
   renderStats();
 }
-
+ 
 // Special assign modal (checkbox multi-select for T5 / Farm)
 let specialAssignExemptKey = null;
 let specialAssignPending = {}; // id → true/false delta
-
+ 
 function openSpecialAssign(rank, exemptKey, label, icon, color) {
   specialAssignExemptKey = exemptKey;
   specialAssignPending = {};
@@ -2027,7 +2027,7 @@ function openSpecialAssign(rank, exemptKey, label, icon, color) {
   renderSpecialAssignList();
   document.getElementById('special-assign-modal').classList.remove('hidden');
 }
-
+ 
 function renderSpecialAssignList() {
   const key = specialAssignExemptKey;
   const search = (document.getElementById('special-assign-search')?.value || '').toLowerCase();
@@ -2052,14 +2052,14 @@ function renderSpecialAssignList() {
     }).join('')
     : `<div style="color:var(--txt2);font-size:12px;padding:16px;text-align:center">Không tìm thấy</div>`;
 }
-
+ 
 function toggleSpecialPick(id) {
   const key = specialAssignExemptKey;
   const current = specialAssignPending[id] !== undefined ? specialAssignPending[id] : members.find(x=>x.id===id)?.[key];
   specialAssignPending[id] = !current;
   renderSpecialAssignList();
 }
-
+ 
 function confirmSpecialAssign() {
   const key = specialAssignExemptKey;
   const otherKey = key === 'isT5' ? 'isFarm' : 'isT5';
@@ -2083,7 +2083,7 @@ function confirmSpecialAssign() {
     renderStats();
   }
 }
-
+ 
 function closeSpecialAssign() {
   document.getElementById('special-assign-modal').classList.add('hidden');
   specialAssignExemptKey = null;
@@ -2091,7 +2091,7 @@ function closeSpecialAssign() {
 }
 let rankAssignMemberId = null;
 let rankAssignSelected = null;
-
+ 
 function openRankAssign(memberId) {
   const m = members.find(x => x.id === memberId);
   if (!m) return;
@@ -2113,7 +2113,7 @@ function openRankAssign(memberId) {
   ).join('');
   document.getElementById('rank-assign-modal').classList.remove('hidden');
 }
-
+ 
 function selectRankOption(rank, el) {
   rankAssignSelected = rank;
   // Only iterate real rank items (R1-R5, no T5/Farm)
@@ -2126,12 +2126,12 @@ function selectRankOption(rank, el) {
     item.style.borderLeft = `3px solid ${r===rank ? c.color : 'transparent'}`;
   });
 }
-
+ 
 function closeRankAssign() {
   document.getElementById('rank-assign-modal').classList.add('hidden');
   rankAssignMemberId = null; rankAssignSelected = null;
 }
-
+ 
 function confirmRankAssign() {
   if (!rankAssignMemberId || !rankAssignSelected) return;
   if (RANK_BOARD_CFG[rankAssignSelected]?.isSpecial) return; // safety guard
@@ -2144,11 +2144,11 @@ function confirmRankAssign() {
   showToast(`✅ ${m.name}: ${old} → ${rankAssignSelected}`);
   renderRankBoard(); renderMembers(); renderWeek();
 }
-
+ 
 // Quick assign: add member to a rank from a rank card
 let quickAssignRank = null;
 let quickAssignMemberId = null;
-
+ 
 function openQuickAssign(rank) {
   if (RANK_BOARD_CFG[rank]?.isSpecial) return; // handled by openSpecialAssign
   quickAssignRank = rank;
@@ -2160,7 +2160,7 @@ function openQuickAssign(rank) {
   renderQuickAssignList();
   document.getElementById('quick-assign-modal').classList.remove('hidden');
 }
-
+ 
 function renderQuickAssignList() {
   const search = (document.getElementById('quick-assign-search')?.value || '').toLowerCase();
   const filtered = members.filter(m =>
@@ -2178,18 +2178,18 @@ function renderQuickAssignList() {
       </div>`).join('')
     : `<div style="color:var(--txt2);font-size:12px;padding:14px;text-align:center">Không tìm thấy</div>`;
 }
-
+ 
 function selectQuickMember(id, el) {
   quickAssignMemberId = id;
   document.querySelectorAll('#quick-assign-list .rank-assign-item').forEach(item => item.classList.remove('selected-assign'));
   if (el) el.classList.add('selected-assign');
 }
-
+ 
 function closeQuickAssign() {
   document.getElementById('quick-assign-modal').classList.add('hidden');
   quickAssignRank = null; quickAssignMemberId = null;
 }
-
+ 
 function confirmQuickAssign() {
   if (!quickAssignMemberId || !quickAssignRank) { showToast('❗ Chọn thành viên trước!'); return; }
   const m = members.find(x => x.id === quickAssignMemberId);
@@ -2201,17 +2201,17 @@ function confirmQuickAssign() {
   showToast(`✅ ${m.name}: ${old} → ${quickAssignRank}`);
   renderRankBoard(); renderMembers(); renderWeek();
 }
-
+ 
 // ── EXEMPT MANAGEMENT (checkbox-based inline panels) ─────────────────────────
 function renderExemptPanels() {
   const t5   = members.filter(m => m.isT5);
   const farm = members.filter(m => m.isFarm);
-
+ 
   const t5el   = document.getElementById('t5-count');
   const farmel = document.getElementById('farm-count');
   if (t5el)   t5el.textContent   = t5.length;
   if (farmel) farmel.textContent = farm.length;
-
+ 
   // T5 inline list
   const t5list = document.getElementById('t5-check-list');
   if (t5list) {
@@ -2227,7 +2227,7 @@ function renderExemptPanels() {
         </div>`).join('')
       : `<div style="color:#3a5a3a;font-size:12px;text-align:center;padding:16px 8px;border:1px dashed #1a3a1a;border-radius:8px">Chưa có lính T5</div>`;
   }
-
+ 
   // Farm inline list
   const farmlist = document.getElementById('farm-check-list');
   if (farmlist) {
@@ -2244,7 +2244,7 @@ function renderExemptPanels() {
       : `<div style="color:#2a5a7a;font-size:12px;text-align:center;padding:16px 8px;border:1px dashed #1a3050;border-radius:8px">Chưa có acc farm</div>`;
   }
 }
-
+ 
 function removeExempt(id, type) {
   const m = members.find(x => x.id === id);
   if (!m) return;
@@ -2257,14 +2257,14 @@ function removeExempt(id, type) {
   renderWeek();
   renderStats();
 }
-
+ 
 // Keep old stubs so no JS errors from any lingering references
 function openExemptManager()  {}
 function closeExemptManager() {}
 function renderExemptList()   { renderExemptPanels(); }
 function toggleT5(id)  { const m=members.find(x=>x.id===id); if(m){m.isT5=!m.isT5; if(m.isT5)m.isFarm=false; markDirty(); renderExemptPanels(); renderRankBoard(); renderWeek(); renderStats();} }
 function toggleFarm(id){ const m=members.find(x=>x.id===id); if(m){m.isFarm=!m.isFarm; if(m.isFarm)m.isT5=false; markDirty(); renderExemptPanels(); renderRankBoard(); renderWeek(); renderStats();} }
-
+ 
 function renderStats() {
   const s = calcStats();
   const cards = [
@@ -2297,7 +2297,7 @@ function showToast(msg) {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => t.classList.add('hidden'), 2200);
 }
-
+ 
 // ── INIT ──────────────────────────────────────────────────────────────────────
 loadData();
 members.forEach(m => {
@@ -2314,6 +2314,7 @@ setInterval(buildNotification, 60000);
 // Auto-save dirty data every 10s
 setInterval(() => { if (isDirty) saveData(); }, 10000);
 </script>
-
+ 
 </body>
 </html>
+ 
