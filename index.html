@@ -414,11 +414,11 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
         <input class="field-input" id="new-charid" placeholder="Character ID (số)" style="margin:0"/>
         <select class="field-select" id="new-rank" style="margin:0">
-          <option value="R4">R4 - Member</option>
-          <option value="R5">R5 - Leader</option>
-          <option value="R3">R3 - Elder</option>
-          <option value="R2">R2 - Officer</option>
-          <option value="R1">R1 - Newbie</option>
+          <option value="R4">R4 - Sĩ Quan Cấp Cao</option>
+<option value="R5">R5 - Thủ Lĩnh</option>
+<option value="R3">R3 - Nghị Viên</option>
+<option value="R2">R2 - Nội Các</option>
+<option value="R1">R1 - Công Chức</option>
         </select>
       </div>
       <input class="field-input" id="new-notes" placeholder="Ghi chú (tuỳ chọn)" style="margin-bottom:10px"/>
@@ -707,14 +707,14 @@ const RES_CFG = {
   gold:  { label:'Vàng', icon:'💰', min:4000000, color:'#EAB308' },
 };
 
-const RANK_LABELS = { R5:'R5 — Leader', R4:'R4 — Member', R3:'R3 — Elder', R2:'R2 — Officer', R1:'R1 — Newbie' };
+const RANK_LABELS = { R5:'R5 — Thủ Lĩnh', R4:'R4 — Sĩ Quan Cấp Cao', R3:'R3 — Nghị Viên', R2:'R2 — Nội Các', R1:'R1 — Công Chức' };
 const RANK_ORDER  = { R5:5, R4:4, R3:3, R2:2, R1:1 };
 const RANK_BOARD_CFG = {
-  R5:   { label:'R5 — Thủ Lĩnh',   icon:'👑',  desc:'Quyền lực cao nhất',        color:'#a78bfa', cardCls:'rank-R5-card',   chipBg:'#2d1f4e', chipColor:'#a78bfa', maxSlots:1,    isSpecial:false },
-  R4:   { label:'R4 — Phó Thủ Lĩnh',icon:'⚔️', desc:'Phó bang chủ',              color:'#00b4d8', cardCls:'rank-R4-card',   chipBg:'#002233', chipColor:'#00b4d8', maxSlots:4,    isSpecial:false },
-  R3:   { label:'R3 — Trưởng Lão',  icon:'🛡',  desc:'Trưởng lão bang hội',       color:'#00d68f', cardCls:'rank-R3-card',   chipBg:'#002211', chipColor:'#00d68f', maxSlots:null, isSpecial:false },
-  R2:   { label:'R2 — Sĩ Quan',     icon:'🗡',  desc:'Sĩ quan chính thức',        color:'#f59e0b', cardCls:'rank-R2-card',   chipBg:'#221600', chipColor:'#f59e0b', maxSlots:null, isSpecial:false },
-  R1:   { label:'R1 — Tân Binh',    icon:'🪖',  desc:'Thành viên mới',            color:'#ff8c42', cardCls:'rank-R1-card',   chipBg:'#2d1400', chipColor:'#ff8c42', maxSlots:null, isSpecial:false },
+  R5: { label:'R5 — Thủ Lĩnh',         desc:'Thủ lĩnh cao nhất',        color:'#a78bfa', cardCls:'rank-R5-card',   chipBg:'#2d1f4e', chipColor:'#a78bfa', maxSlots:1,    isSpecial:false },
+  R4: { label:'R4 — Sĩ Quan Cấp Cao',  desc:'Sĩ quan cấp cao',              color:'#00b4d8', cardCls:'rank-R4-card',   chipBg:'#002233', chipColor:'#00b4d8', maxSlots:4,    isSpecial:false },
+  R3: { label:'R3 — Nghị Viên',         desc:'Nghị viên / Nghị sĩ',       color:'#00d68f', cardCls:'rank-R3-card',   chipBg:'#002211', chipColor:'#00d68f', maxSlots:null, isSpecial:false },
+  R2: { label:'R2 — Nội Các',           desc:'Nội các bang hội',        color:'#f59e0b', cardCls:'rank-R2-card',   chipBg:'#221600', chipColor:'#f59e0b', maxSlots:null, isSpecial:false },
+  R1: { label:'R1 — Công Chức',         desc:'Công chức bang hội',            color:'#ff8c42', cardCls:'rank-R1-card',   chipBg:'#2d1400', chipColor:'#ff8c42', maxSlots:null, isSpecial:false },
   T5:   { label:'Lính T5',          icon:'🛡',  desc:'Lính đã nâng quân T5 — Miễn thuế', color:'#a3e635', cardCls:'rank-T5-card', chipBg:'#0d2200', chipColor:'#a3e635', maxSlots:null, isSpecial:true, exemptKey:'isT5'   },
   Farm: { label:'Acc Farm',         icon:'🌾',  desc:'Tài khoản farm tài nguyên — Miễn thuế', color:'#38bdf8', cardCls:'rank-Farm-card', chipBg:'#001a33', chipColor:'#38bdf8', maxSlots:null, isSpecial:true, exemptKey:'isFarm' },
 };
